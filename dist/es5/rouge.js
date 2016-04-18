@@ -120,7 +120,6 @@ function sentenceSegment(input) {
 
   // Split sentences naively based on common terminals (.?!")
   var chunks = input.split(/(\S.+?[.?!])(?=\s+|$|")/g);
-  console.log(chunks);
   var acc = [];
   for (var idx = 0; idx < chunks.length; idx++) {
     if (chunks[idx]) {
