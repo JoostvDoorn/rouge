@@ -113,8 +113,8 @@ function sentenceSegment(input) {
   if (input.length === 0) return [];
 
   var abbrvReg = new RegExp('\\b(' + GATE_SUBSTITUTIONS.join('|') + ')[.!?] ?$', 'i');
-  var acronymReg = new RegExp(/[ |.][A-Z].?$/, 'i');
-  var breakReg = new RegExp(/[\r\n]+/, 'g');
+  var acronymReg = new RegExp(/[ |.][A-Z].?$/i);
+  var breakReg = new RegExp(/[\r\n]+/g);
   var ellipseReg = new RegExp(/\.\.\.*$/);
   var excepReg = new RegExp('\\b(' + GATE_EXCEPTIONS.join('|') + ')[.!?] ?$', 'i');
 
